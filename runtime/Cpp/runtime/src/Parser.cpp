@@ -161,7 +161,7 @@ void Parser::setTrimParseTree(bool trimParseTrees) {
 }
 
 bool Parser::getTrimParseTree() {
-  return std::find(getParseListeners().begin(), getParseListeners().end(), &TrimToSizeListener::INSTANCE) != getParseListeners().end();
+  return std::find(_parseListeners.begin(), _parseListeners.end(), &TrimToSizeListener::INSTANCE) != _parseListeners.end();
 }
 
 std::vector<tree::ParseTreeListener *> Parser::getParseListeners() {
